@@ -1,0 +1,61 @@
+feat(admin): Add interactive priority controls to PersonRow with increment/decrement buttons
+- Add handlePriorityChange function to update person priority via API
+- Replace static priority display with interactive button controls (▼ and ▲)
+- Implement decrease priority button with minimum boundary at 0
+- Implement increase priority button with no upper limit
+- Add visual feedback with hover states and disabled states during updates
+- Add loading state management to prevent concurrent updates
+- Improve priority display with centered layout and consistent styling
+- Fix whitespace formatting in LanguageSwitcher import statement
+
+feat(language): Redesign language switcher with dual-button layout and improve responsive behavior
+- Replace single toggle button with separate Nepali and English buttons for clearer language selection
+- Extract button styling into reusable buttonStyle function to reduce code duplication
+- Update button labels from emoji flags to text abbreviations (ने for Nepali, En for English)
+- Refine hover states to only apply when button is inactive, improving UX clarity
+- Adjust ContactCardSection grid minmax from 450px to 350px for better mobile layout
+- Reduce gap in ContactCardSection from clamp(2rem, 4vw, 3rem) to clamp(1.5rem, 4vw, 3rem)
+- Update NavigationBarSection media query to ensure language switcher remains visible on screens under 480px
+- Reduce button padding and font size on very small screens for better space utilization
+- Change default language preference from English to Nepali in LanguageContext
+- Improve accessibility with clearer button titles and visual active state indicators
+
+fix(admin): Update contact and about data payload structures and API methods
+- Change contactRemoteDataSource updateContact from PUT to PATCH method
+- Update API endpoint from `/data/contact/{id}` to `/data/contact` for PATCH requests
+- Refactor AboutPage payload structure to use camelCase naming (sectionItems, sectionName, sectionType, sectionConfiguration)
+- Restructure about data payload to match backend API expectations with proper field mapping
+- Update ContactCardSection to use dynamic title from contactInfo with fallback to default text
+- Ensure data consistency between frontend payload structure and backend API requirements
+
+fix(admin): Update button styles and form initialization in AboutPage and PeoplePage
+- Change AboutPage cancel button text color from gray (#6b7280) to black (#000000)
+- Simplify PeoplePage "Add New Person" button styling: replace gradient background with solid color (#3655A0) and remove hover effects
+- Add missing onClick handler to edit button in PersonRow component
+- Add useEffect hook to PersonFormModal to initialize form data when person prop changes
+- Update PersonFormModal cancel button text color to black (#000000)
+- Fix aboutRemoteDataSource: change updateAbout endpoint from PUT to PATCH method and update URL path
+
+Fix personRemoteDataSource: change updatePerson from PUT to PATCH method
+
+Fix PeoplePage errors: remove duplicate style tag, fix handleDelete reference, remove duplicate closing parenthesis
+
+Add Personnel Management Phase 2 completion summary
+
+Update admin features checklist: Personnel Management Phase 1 & 2 complete
+
+Add Phase 2 features to PeoplePage: form modal, delete confirmation, toast notifications, and edit/delete handlers
+
+Add Personnel Management Phase 2 implementation plan with detailed feature specifications
+
+Update admin features checklist: Personnel Management Phase 1 complete, Phase 2 enhancements documented
+
+feat(admin): Add bilingual header management to Footer page
+- Add state management for Important Links section headers in English and Nepali
+- Add original state tracking for header values to detect changes
+- Implement bilingual input fields for editing Important Links headers
+- Update change detection logic to include header modifications
+- Persist header values to data structure on save
+- Rename section title to "Header Management" for clarity
+
+13commits
