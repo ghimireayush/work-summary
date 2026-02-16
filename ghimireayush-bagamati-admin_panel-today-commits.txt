@@ -1,0 +1,11 @@
+
+feat(admin): Add bilingual header management to Footer page
+
+- Add state management for Important Links section headers in English and Nepali
+- Add original state tracking for header values to detect changes
+- Implement bilingual input fields for editing Important Links headers
+- Update change detection logic to include header modifications
+- Persist header values to data structure on save
+- Rename section title to "Header Management" for clarity
+
+2commits
